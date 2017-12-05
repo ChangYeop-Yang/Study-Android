@@ -39,7 +39,7 @@
 
 **⌘ 강의계획서**
 
-![Alt text](/path/to/img.jpg)
-![Alt text](/path/to/img.jpg)
+![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/Course%20Info%201.jpg)
+![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/Course%20Info%202.jpg)
 
 * * *
