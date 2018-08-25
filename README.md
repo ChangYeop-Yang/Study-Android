@@ -43,4 +43,10 @@
 |:------:|:--------:|
 |![](http://drive.google.com/uc?export=view&id=1952gO-_RLTzyaekYSVYcUyANDv8QSosC)|![](http://drive.google.com/uc?export=view&id=1hcY9MBRh9ztjtElmJ7WqALTrSt2SXKHV)|
 
+## ⌘ Reference
+* [MID TERM PROJECT - YOUTUBE](https://www.youtube.com/watch?v=9ngohVJjrU8)
+* [FINAL TEAM PROJECT - YOUTUBE](https://www.youtube.com/watch?v=tBYImD_pKN8)
+* [Tracking Bicycle Application - Naver Blog](http://yeop9657.blog.me/221162533210)
+* [Android Mid-Term Project - Naver Blog](http://yeop9657.blog.me/221125361520)
+
 * * *
