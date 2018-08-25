@@ -3,19 +3,15 @@
 
 * * *
 
-**⌘ 강의개요 및 목적**
+## ⌘ 강의개요 및 목적
 
 본 과목은 최근들어 IT 산업 전반에 뿐만 아니라 우리 생활에 밀접하게 활용되고 있는 스마트폰 앱을 통한 다양한 서비스에 대한 사회적, 문화적, 기술적, 경제적 동향을 살펴본다. 또한 Open 개발 환경인 안드로이드에서의 프로그래밍을 직접 실습해 봄으로써 스마트폰 앱 개발에 대한 기본적인 개념과 스킬을 배운다.
 
-* * *
-
-**⌘ 수강에 특별히 참고할 사항**
+## ⌘ 수강에 특별히 참고할 사항
 
 자바 혹은 C++ 프로그래밍에 익숙한 학생들의 수강이 바람직함
 
-* * *
-
-**⌘ 강의내용 및 일정**
+## ⌘ 강의내용 및 일정
 
 |Week|Title|
 |:-----:|-------|
@@ -35,11 +31,16 @@
 |제 14주 |	14.카드보드 VR 혹은 기어 VR|
 |제 15주 |	텀프로젝트 시연 	최종과제 발표|
 
-* * *
+## ⌘ 강의계획서
 
-**⌘ 강의계획서**
+|IMAGE 1|IMAGE 2|
+|:-----:|:-----:|
+|![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/Course%20Info%201.jpg)|![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/Course%20Info%202.jpg)|
 
-![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/Course%20Info%201.jpg)
-![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/Course%20Info%202.jpg)
+## ⌘ 과제
+
+|Mid-Term|Final-Term|
+|:------:|:--------:|
+|![](http://drive.google.com/uc?export=view&id=1952gO-_RLTzyaekYSVYcUyANDv8QSosC)|![](http://drive.google.com/uc?export=view&id=1hcY9MBRh9ztjtElmJ7WqALTrSt2SXKHV)|
 
 * * *
