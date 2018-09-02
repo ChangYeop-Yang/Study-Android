@@ -43,6 +43,23 @@
 |:------:|:--------:|
 |![](http://drive.google.com/uc?export=view&id=1952gO-_RLTzyaekYSVYcUyANDv8QSosC)|![](http://drive.google.com/uc?export=view&id=1hcY9MBRh9ztjtElmJ7WqALTrSt2SXKHV)|
 
+
+|Subject 1|Subject 2|
+|:-------:|:-------:|
+|![](https://user-images.githubusercontent.com/20036523/44946562-7a1eae00-ae39-11e8-9d26-806789176c33.jpg)|![](https://user-images.githubusercontent.com/20036523/44946563-7a1eae00-ae39-11e8-91dd-da5f3ae69b8a.jpg)|
+
+|Subject 3|Subject 4|
+|:-------:|:-------:|
+|![](https://user-images.githubusercontent.com/20036523/44946564-7ab74480-ae39-11e8-9914-7d08897238cd.jpg)|![](https://user-images.githubusercontent.com/20036523/44946565-7ab74480-ae39-11e8-8a1b-6501ea8576df.jpg)|
+
+|Subject 5|Subject 6|
+|:-------:|:-------:|
+|![](https://user-images.githubusercontent.com/20036523/44946566-7c810800-ae39-11e8-82c7-a5995ca20c5b.jpg)|![](https://user-images.githubusercontent.com/20036523/44946567-7c810800-ae39-11e8-87f5-0441541e45e8.jpg)|
+
+|Subject 7|Subject 8|
+|:-------:|:-------:|
+|![](https://user-images.githubusercontent.com/20036523/44946568-7c810800-ae39-11e8-824f-44e09ab1ab1e.jpg)|![](https://user-images.githubusercontent.com/20036523/44946569-7d199e80-ae39-11e8-829c-6725d14e2cb9.jpg)|
+
 ## ⌘ Reference
 * [MID TERM PROJECT - YOUTUBE](https://www.youtube.com/watch?v=9ngohVJjrU8)
 * [FINAL TEAM PROJECT - YOUTUBE](https://www.youtube.com/watch?v=tBYImD_pKN8)
