@@ -72,5 +72,3 @@
 * [FINAL TEAM PROJECT - YOUTUBE](https://www.youtube.com/watch?v=tBYImD_pKN8)
 * [Tracking Bicycle Application - Naver Blog](http://yeop9657.blog.me/221162533210)
 * [Android Mid-Term Project - Naver Blog](http://yeop9657.blog.me/221125361520)
-
-* * *
