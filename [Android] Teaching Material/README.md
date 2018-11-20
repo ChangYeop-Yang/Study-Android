@@ -35,7 +35,7 @@
 
 |IMAGE 1|IMAGE 2|
 |:-----:|:-----:|
-|![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/Course%20Info%201.jpg)|![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/Course%20Info%202.jpg)|
+|![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/%5BAndroid%5D%20Teaching%20Material/Course%20Info%201.jpg)|![Alt text](https://github.com/ChangYeop-Yang/Study-Android/blob/master/%5BAndroid%5D%20Teaching%20Material/Course%20Info%202.jpg)|
 
 ## ⌘ 과제
 
