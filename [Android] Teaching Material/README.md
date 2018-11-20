@@ -1,9 +1,4 @@
-# Study-Android
-**[Mobile App Programming 1] Personal School Android Project. (Prof. 정기숙)**
-
-* * *
-
-## ⌘ 강의개요 및 목적
+# [Mobile App Programming 1] Personal School Android Project. (Prof. 정기숙)
 
 본 과목은 최근들어 IT 산업 전반에 뿐만 아니라 우리 생활에 밀접하게 활용되고 있는 스마트폰 앱을 통한 다양한 서비스에 대한 사회적, 문화적, 기술적, 경제적 동향을 살펴본다. 또한 Open 개발 환경인 안드로이드에서의 프로그래밍을 직접 실습해 봄으로써 스마트폰 앱 개발에 대한 기본적인 개념과 스킬을 배운다.
 
