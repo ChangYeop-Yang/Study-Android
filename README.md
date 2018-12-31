@@ -78,6 +78,10 @@
 |:---------------------------------:|:---------------------------------:|
 |![](https://user-images.githubusercontent.com/20036523/50559842-d6d59b00-0d3d-11e9-8c15-0ef2ba8750c3.jpg)|![](https://user-images.githubusercontent.com/20036523/50559843-d6d59b00-0d3d-11e9-9241-6ccb8646ecf2.jpg)|
 
+|:movie_camera: Demo Play for Mid-Term Project|
+|:--------------------------------------:|
+|<div align="center"><a href="https://www.youtube.com/watch?v=JPzTv8qNuvM"><img src="https://img.youtube.com/vi/9ngohVJjrU8/0.jpg" width="1024" height="486"></a></div>|
+
 ## ★ REFERENCE
 
 :airplane: [MID TERM PROJECT - YOUTUBE](https://www.youtube.com/watch?v=9ngohVJjrU8)
