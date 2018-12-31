@@ -32,6 +32,52 @@
 |:------------------------------:|:------------------------------:|
 |![](https://user-images.githubusercontent.com/20036523/44946568-7c810800-ae39-11e8-824f-44e09ab1ab1e.jpg)|![](https://user-images.githubusercontent.com/20036523/44946569-7d199e80-ae39-11e8-829c-6725d14e2cb9.jpg)|
 
+## ★ Photo for Mid-Term Project
+
+|:camera: Mid-Term Project Photo 001|:camera: Mid-Term Project Photo 002|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559818-ccb39c80-0d3d-11e9-9e41-f486523880dc.jpg)|![](https://user-images.githubusercontent.com/20036523/50559819-ccb39c80-0d3d-11e9-8d57-aff3dcd5848b.jpg)|
+
+|:camera: Mid-Term Project Photo 003|:camera: Mid-Term Project Photo 004|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559817-ccb39c80-0d3d-11e9-87fe-bf79c83738ff.jpg)|![](https://user-images.githubusercontent.com/20036523/50559822-d3421400-0d3d-11e9-856c-b1d364f63c13.jpg)|
+
+|:camera: Mid-Term Project Photo 005|:camera: Mid-Term Project Photo 006|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559823-d3421400-0d3d-11e9-96cb-d20b2321c552.jpg)|![](https://user-images.githubusercontent.com/20036523/50559825-d3421400-0d3d-11e9-9527-0365afca9717.jpg)|
+
+|:camera: Mid-Term Project Photo 007|:camera: Mid-Term Project Photo 008|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559826-d3daaa80-0d3d-11e9-9931-8f58edce9c87.jpg)|![](https://user-images.githubusercontent.com/20036523/50559827-d3daaa80-0d3d-11e9-991b-e98c17864ea8.jpg)|
+
+|:camera: Mid-Term Project Photo 009|:camera: Mid-Term Project Photo 010|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559828-d3daaa80-0d3d-11e9-851c-4428d2b9381d.jpg)|![](https://user-images.githubusercontent.com/20036523/50559829-d4734100-0d3d-11e9-9083-eb039591f61f.jpg)|
+
+|:camera: Mid-Term Project Photo 011|:camera: Mid-Term Project Photo 012|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559830-d4734100-0d3d-11e9-8a7b-6d33aa134b4c.jpg)|![](https://user-images.githubusercontent.com/20036523/50559831-d4734100-0d3d-11e9-8097-5082484d64b2.jpg)|
+
+|:camera: Mid-Term Project Photo 013|:camera: Mid-Term Project Photo 014|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559832-d50bd780-0d3d-11e9-9820-8e9f2694f409.jpg)|![](https://user-images.githubusercontent.com/20036523/50559833-d50bd780-0d3d-11e9-99f2-66d67091c84a.jpg)|
+
+|:camera: Mid-Term Project Photo 015|:camera: Mid-Term Project Photo 016|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559836-d5a46e00-0d3d-11e9-9dbb-a2f33ce79c19.jpg)|![](https://user-images.githubusercontent.com/20036523/50559837-d5a46e00-0d3d-11e9-8c97-5265cc209955.jpg)|
+
+|:camera: Mid-Term Project Photo 017|:camera: Mid-Term Project Photo 018|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559838-d5a46e00-0d3d-11e9-9f49-1abed05e4a3f.jpg)|![](https://user-images.githubusercontent.com/20036523/50559839-d63d0480-0d3d-11e9-99ba-a5a43a73b0a4.jpg)|
+
+|:camera: Mid-Term Project Photo 019|:camera: Mid-Term Project Photo 020|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559840-d63d0480-0d3d-11e9-84f3-042dd8d2aa1c.jpg)|![](https://user-images.githubusercontent.com/20036523/50559841-d63d0480-0d3d-11e9-8b93-4267b54ca91f.jpg)|
+
+|:camera: Mid-Term Project Photo 021|:camera: Mid-Term Project Photo 022|
+|:---------------------------------:|:---------------------------------:|
+|![](https://user-images.githubusercontent.com/20036523/50559842-d6d59b00-0d3d-11e9-8c15-0ef2ba8750c3.jpg)|![](https://user-images.githubusercontent.com/20036523/50559843-d6d59b00-0d3d-11e9-9241-6ccb8646ecf2.jpg)|
+
 ## ★ REFERENCE
 
 :airplane: [MID TERM PROJECT - YOUTUBE](https://www.youtube.com/watch?v=9ngohVJjrU8)
