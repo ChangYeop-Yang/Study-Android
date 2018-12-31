@@ -80,7 +80,7 @@
 
 |:movie_camera: Demo Play for Mid-Term Project|
 |:--------------------------------------:|
-|<div align="center"><a href="https://www.youtube.com/watch?v=JPzTv8qNuvM"><img src="https://img.youtube.com/vi/9ngohVJjrU8/0.jpg" width="1024" height="486"></a></div>|
+|<div align="center"><a href="https://www.youtube.com/watch?v=9ngohVJjrU8"><img src="https://img.youtube.com/vi/9ngohVJjrU8/0.jpg" width="1024" height="486"></a></div>|
 
 ## ★ REFERENCE
 
