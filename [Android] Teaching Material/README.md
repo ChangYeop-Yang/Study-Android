@@ -149,7 +149,36 @@ override fun onDestroy() {
     }
 ```
 
+## 📣 Android NDK (Native Development Kit)
+
+* NDK(Native Development Kit)는 Android에서 C 및 C++ 코드를 사용할 수 있게 해주는 일련의 도구 모음으로, 네이티브 액티비티를 관리하고 센서 및 터치 입력과 같은 물리적 기기 구성요소에 액세스하는 데 사용할 수 있는 플랫폼 라이브러리를 제공합니다.
+
+* Android 스튜디오 2.2 이상을 사용하면 C 및 C++ 코드를 네이티브 라이브러리로 컴파일하고 IDE의 내장 빌드 시스템인 Gradle을 사용하여 APK로 패키징할 때 NDK를 이용할 수 있습니다.
+
+* Android 스튜디오에서 네이티브 라이브러리를 컴파일하는 기본 빌드 도구는 CMake입니다.
+
+###### 🔨 Android NDK (Native Development Kit) Installation
+
+<p align="center">
+  <img src="" />
+</p>
+
+|📷 NDK Installation Image 001|📷 NDK Installation Image 001|
+|:----------------------------:|:---------------------------:|
+|![](https://developer.android.com/studio/images/projects/ndk-install_2-2_2x.png)|![](https://user-images.githubusercontent.com/20036523/59902872-59602d00-943a-11e9-9e36-7e6b4351fb22.png)|
+
+* 열려 있는 프로젝트의 기본 메뉴에서 Tools > Android > SDK Manager를 선택합니다.
+
+* SDK Tools 탭을 클릭합니다.
+
+* 그림에서와 같이 LLDB, CMake, NDK 옆에 있는 체크박스를 선택합니다.
+
+* Apply를 클릭한 후 다음 대화상자에서 OK를 클릭합니다.
+
+* 설치가 완료되면 Finish와 OK를 차례로 클릭합니다.
+
 ## ★ REFERENCE
+
 * [안드로이드 (운영 체제) - 위키백과](https://android-developers.googleblog.com/)
 
 ## ★ Developer Information
