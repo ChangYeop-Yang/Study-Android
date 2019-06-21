@@ -159,19 +159,82 @@ override fun onDestroy() {
 
 ###### 🔨 [Android NDK (Native Development Kit) Installation](https://developer.android.com/ndk)
 
-|📷 NDK Installation Image 001|📷 NDK Installation Image 001|
+|📷 NDK Installation Image 001|📷 NDK Installation Image 002|
 |:----------------------------:|:---------------------------:|
 |![](https://developer.android.com/studio/images/projects/ndk-install_2-2_2x.png)|![](https://user-images.githubusercontent.com/20036523/59902872-59602d00-943a-11e9-9e36-7e6b4351fb22.png)|
 
-* 열려 있는 프로젝트의 기본 메뉴에서 Tools > Android > SDK Manager를 선택합니다.
+001. 열려 있는 프로젝트의 기본 메뉴에서 Tools > Android > SDK Manager를 선택합니다.
 
-* SDK Tools 탭을 클릭합니다.
+002. SDK Tools 탭을 클릭합니다.
 
-* 그림에서와 같이 LLDB, CMake, NDK 옆에 있는 체크박스를 선택합니다.
+003. 그림에서와 같이 LLDB, CMake, NDK 옆에 있는 체크박스를 선택합니다.
 
-* Apply를 클릭한 후 다음 대화상자에서 OK를 클릭합니다.
+004. Apply를 클릭한 후 다음 대화상자에서 OK를 클릭합니다.
 
-* 설치가 완료되면 Finish와 OK를 차례로 클릭합니다.
+005. 설치가 완료되면 Finish와 OK를 차례로 클릭합니다.
+
+###### 🔨 How To Use Android NDK (Native Development Kit)
+
+001. Java 파일 내에서 표준 System.loadLibrary를 사용하여 공유 라이브러리에서 C++ 코드를 불러옵니다.
+
+##### 📄 Android NDK (Native Development Kit) Source Code 001
+
+```JAVA
+    // Used to load the 'Here NDK File Name' library on application startup.
+    static {
+        System.loadLibrary("Here NDK File Name");
+    }
+```
+
+002. C++ Native File 내에 정의 된 Method를 사용할 수 있도록 Java 파일 내에 선언합니다. `[Access Modifier] native [Return Type] Method Name (Parameters)`의 형식으로 정의합니다.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/20036523/59902873-59602d00-943a-11e9-9f61-fa5dd97c487a.png" />
+</p>
+
+##### 📄 Android NDK (Native Development Kit) Source Code 002
+
+```JAVA
+      /*
+      * A native method that is implemented by the 'Here NDK File Name' native library,
+      * which is packaged with this application.
+      */
+     
+    public native String stringFromJNI();
+    public native double doubleFromJNI();
+    public native int addTargetFromJNI(int left, int right);
+```
+
+003. C++ Native File을 열어서 `#include <jni.h>` 선언하고 `extern "C" JNIEXPORT [JNI RETURN TYPE] JNICALL`을 함수 정의 위에 작성합니다. 이후 `Java_[ANDROID_PACKGE_PATH]_[ACTIVITY_NAME]_[METHOD NAME](JNIEnv * env, jobject instance, [OPTIONAL])` 의 형태로 함수를 정의합니다.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/20036523/59904104-a42f7400-943d-11e9-83c1-66cfd2104c4e.png" />
+</p>
+
+##### 📄 Android NDK (Native Development Kit) Source Code 003
+
+```C++
+#include <jni.h>
+#include <string>
+#include <iostream>
+
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_example_myapplication_MainActivity_stringFromJNI(JNIEnv * env, jobject instance) {
+    // MARK: JNIEnv*는 VM을 가리키는 포인터이고 jobject는 자바 측으로부터 전달된 암시적 this 객체를 가리키는 포인터입니다.
+    std::string hello = "Hello from C++";
+    return env->NewStringUTF(hello.c_str());
+} extern "C"
+
+JNIEXPORT jdouble JNICALL
+Java_com_example_myapplication_MainActivity_doubleFromJNI(JNIEnv *env, jobject instance) {
+    return 3.14;
+} extern "C"
+
+JNIEXPORT jint JNICALL
+Java_com_example_myapplication_MainActivity_addTargetFromJNI(JNIEnv *env,  jobject instance, jint left, jint right) {
+    return left + right;
+} extern "C";
+```
 
 ## ★ REFERENCE
 
