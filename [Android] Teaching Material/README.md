@@ -12,6 +12,8 @@
 
 * You must implement this callback, which fires when the system first creates the activity. On activity creation, the activity enters the Created state. In the onCreate() method, you perform basic application startup logic that should happen only once for the entire life of the activity. For example, your implementation of onCreate() might bind data to lists, associate the activity with a ViewModel, and instantiate some class-scope variables. This method receives the parameter savedInstanceState, which is a Bundle object containing the activity's previously saved state. If the activity has never existed before, the value of the Bundle object is null.
 
+##### 📄 onCreate() Syntax
+
 ```Kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +45,10 @@ override fun onRestart() {
 ```
 
 ### 📜 onStart()
+
+* When the activity enters the Started state, the system invokes this callback. The onStart() call makes the activity visible to the user, as the app prepares for the activity to enter the foreground and become interactive. For example, this method is where the app initializes the code that maintains the UI. </br></br> When the activity moves to the started state, any lifecycle-aware component tied to the activity's lifecycle will receive the ON_START event. </br></br> The onStart() method completes very quickly and, as with the Created state, the activity does not stay resident in the Started state. Once this callback finishes, the activity enters the Resumed state, and the system invokes the onResume() method.
+
+##### 📄 onStart() Syntax
 
 ```Kotlin
 override fun onStart() {
