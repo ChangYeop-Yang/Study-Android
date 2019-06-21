@@ -12,60 +12,116 @@
 
 * You must implement this callback, which fires when the system first creates the activity. On activity creation, the activity enters the Created state. In the onCreate() method, you perform basic application startup logic that should happen only once for the entire life of the activity. For example, your implementation of onCreate() might bind data to lists, associate the activity with a ViewModel, and instantiate some class-scope variables. This method receives the parameter savedInstanceState, which is a Bundle object containing the activity's previously saved state. If the activity has never existed before, the value of the Bundle object is null.
 
-```JAVA
-TextView textView;
+```Kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-// some transient state for the activity instance
-String gameState;
+        /*
+            1. Activity가 생성되어 시작될 때, 처음으로 호출되는 Method
+            2. Activity의 리소스 초기화, 레이아웃 및 데이터 바인딩 등의 초기 설정 작업 수행
+            3. onCreate() 메소드에서는 Bundle 객체를 매개변수로 받아오는데, 새로 시작된 Activity의 경우 null 값이 전달됨.
 
-@Override
-public void onCreate(Bundle savedInstanceState) {
-    // call the super class onCreate to complete the creation of activity like
-    // the view hierarchy
-    super.onCreate(savedInstanceState);
-
-    // recovering the instance state
-    if (savedInstanceState != null) {
-        gameState = savedInstanceState.getString(GAME_STATE_KEY);
+            * 홈화면에서 종료가 아닌 재진입의 경우 실행되지 않는다.
+        */
+        Toast.makeText(this, "OnCreate() 함수 호출", Toast.LENGTH_LONG).show()
     }
+```
 
-    // set the user interface layout for this activity
-    // the layout file is defined in the project res/layout/main_activity.xml file
-    setContentView(R.layout.main_activity);
+### 📜 onRestart()
 
-    // initialize member TextView so we can manipulate it later
-    textView = (TextView) findViewById(R.id.text_view);
-}
+```Kotlin
+override fun onRestart() {
+        super.onRestart()
 
-// This callback is called only when there is a saved instance that is previously saved by using
-// onSaveInstanceState(). We restore some state in onCreate(), while we can optionally restore
-// other state here, possibly usable after onStart() has completed.
-// The savedInstanceState Bundle is same as the one used in onCreate().
-@Override
-public void onRestoreInstanceState(Bundle savedInstanceState) {
-    textView.setText(savedInstanceState.getString(TEXT_VIEW_KEY));
-}
-
-// invoked when the activity may be temporarily destroyed, save the instance state here
-@Override
-public void onSaveInstanceState(Bundle outState) {
-    outState.putString(GAME_STATE_KEY, gameState);
-    outState.putString(TEXT_VIEW_KEY, textView.getText());
-
-    // call superclass to save any view hierarchy
-    super.onSaveInstanceState(outState);
-}
+        /*
+            1. Activity가 더 이상 화면에 보이지 않게 되었다가 다시 화면을 보여줘야 할 때 호출되는 메소드이며 onStart()가 호출되기 전에 필요한 작업을 수행
+        */
+        
+        Toast.makeText(this, "onRestart() 함수 호출", Toast.LENGTH_LONG).show()
+    }
 ```
 
 ### 📜 onStart()
 
+```Kotlin
+override fun onStart() {
+        super.onStart()
+
+        /*
+            1. Activity가 사용자에게 화면을 보여줄 준비가 되었을 때 호출되는 메소드
+            2. 주로 사용자에게 Activity를 보여주기 위해 필요한 리소스들을 설정함.
+
+            * The onStart() call makes the activity visible to the user, as the app prepares for the activity to enter the foreground and become interactive.
+            For example, this method is where the app initializes the code that maintains the UI.
+        */
+        Toast.makeText(this, "onStart() 함수 호출", Toast.LENGTH_LONG).show()
+    }
+```
+
 ### 📜 onResume()
+
+```Kotlin
+override fun onResume() {
+        super.onResume()
+
+        /*
+            1. Activity가 Activity Stack의 최상위에 놓여서 사용자에게 화면을 보여주고 사용자의 입력을 처리할 수 있을 때 호출되는 메소드
+            2. 오디오나 동영상, 애니메이션 등과 같이 화면 맨 앞에서 실행되고 있을 때만 필요한 리소스들을 설정하기 좋은 메소드
+        */
+        Toast.makeText(this, "onResume() 함수 호출", Toast.LENGTH_LONG).show()
+    }
+```
 
 ### 📜 onPause()
 
+```Kotlin
+override fun onPause() {
+        super.onPause()
+
+        /*
+            1. Activity가 Background 상태에 진입하여 Activity가 Foreground 상태가 해제 된 경우 호출되는 메서드 (the user is leaving your activity)
+
+            * onResume() <~~~~~~~~> onPause() 사이의 Lifecycle은 Foreground Lifecycle 이다.
+
+            * onResume() 메소드에서 설정했던 리소스들은 반드시 onPause() 메소드에서 해제해야 한다.
+            예) onResume() 메소드에서 재생을 시작한 오디오나 동영상, 애니메이션을 중단해야 하고, DB와 같은 리소스들도 해제해야 함.
+         */
+        Toast.makeText(this, "onPause() 함수 호출", Toast.LENGTH_LONG).show()
+    }
+```
+
 ### 📜 onStop()
 
+```Kotlin
+override fun onStop() {
+        super.onStop()
+
+        /*
+            1. 다른 Activity가 Activity Stack의 최상위에 놓이면서, 현재 Activity는 더 이상 화면에 보이질 않게 될 때 호출되는 메소드
+
+            In the onStop() method, the app should release or adjust resources that are not needed while the app is not visible to the user.
+            For example, your app might pause animations or switch from fine-grained to coarse-grained location updates.
+            Using onStop() instead of onPause() ensures that UI-related work continues, even when the user is viewing your activity in multi-window mode.
+
+            * onStart() <~~~~~~~~> onStop() 사이의 Lifecycle은 Visible Lifecycle 이다.
+            * onStart() 메소드에서 설정했던 리소스들(사용자에게 Activity를 보여주기 위해 설정한 리소스들)은 반드시 onStop() 메소드에서 해제해야 한다.
+         */
+        Toast.makeText(this, "onStop() 함수 호출", Toast.LENGTH_LONG).show()
+    }
+```
+
 ### 📜 onDestroy()
+
+```Kotlin
+override fun onDestroy() {
+        super.onDestroy()
+        /*
+            1. Activity가 파괴되기 전에 호출되는 Method (사용자가 직접 종료하는 경우, 메모리 부족으로 OS가 강제 종료하는 경우)
+         */
+        Toast.makeText(this, "onDestroy() 함수 호출", Toast.LENGTH_LONG).show()
+    }
+```
 
 ## ★ REFERENCE
 * [안드로이드 (운영 체제) - 위키백과](https://android-developers.googleblog.com/)
