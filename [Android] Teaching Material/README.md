@@ -157,6 +157,12 @@ override fun onDestroy() {
 
 * Android 스튜디오에서 네이티브 라이브러리를 컴파일하는 기본 빌드 도구는 CMake입니다.
 
+###### 💡 Android NDK (Native Development Kit) TIP
+
+* JNI는 Java Native Interface의 약어입니다. Android가 Java 또는 Kotlin 프로그래밍 언어로 작성된 관리 코드에서 컴파일하는 바이트코드가 C/C++로 작성된 네이티브 코드와 상호 작용할 수 있는 방법을 정의합니다. JNI는 공급업체 중립적이고, 동적 공유 라이브러리에서 코드를 로드할 수 있도록 지원
+
+* Java 프로그래밍 언어는 UTF-16을 사용합니다. 편의상, JNI는 Modified UTF-8에서도 작동하는 메서드를 제공합니다.
+
 ###### 🔨 [Android NDK (Native Development Kit) Installation](https://developer.android.com/ndk)
 
 |📷 NDK Installation Image 001|📷 NDK Installation Image 002|
