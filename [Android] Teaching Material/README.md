@@ -34,6 +34,8 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 * When the activity enters the Resumed state, it comes to the foreground, and then the system invokes the onResume() callback. This is the state in which the app interacts with the user. The app stays in this state until something happens to take focus away from the app. Such an event might be, for instance, receiving a phone call, the user’s navigating to another activity, or the device screen’s turning off.
 
+##### 📄 onRestart() Syntax
+
 ```Kotlin
 override fun onRestart() {
         super.onRestart()
@@ -69,6 +71,10 @@ override fun onStart() {
 
 ### 📜 onResume()
 
+* When the activity enters the Resumed state, it comes to the foreground, and then the system invokes the onResume() callback. This is the state in which the app interacts with the user. The app stays in this state until something happens to take focus away from the app. Such an event might be, for instance, receiving a phone call, the user’s navigating to another activity, or the device screen’s turning off.
+
+##### 📄 onResume() Syntax
+
 ```Kotlin
 override fun onResume() {
         super.onResume()
@@ -82,6 +88,10 @@ override fun onResume() {
 ```
 
 ### 📜 onPause()
+
+* The system calls this method as the first indication that the user is leaving your activity (though it does not always mean the activity is being destroyed); it indicates that the activity is no longer in the foreground (though it may still be visible if the user is in multi-window mode). Use the onPause() method to pause or adjust operations that should not continue (or should continue in moderation) while the Activity is in the Paused state, and that you expect to resume shortly.
+
+##### 📄 onPause() Syntax
 
 ```Kotlin
 override fun onPause() {
@@ -100,6 +110,10 @@ override fun onPause() {
 ```
 
 ### 📜 onStop()
+
+* When your activity is no longer visible to the user, it has entered the Stopped state, and the system invokes the onStop() callback. This may occur, for example, when a newly launched activity covers the entire screen. The system may also call onStop() when the activity has finished running, and is about to be terminated. </br></br> When the activity moves to the stopped state, any lifecycle-aware component tied to the activity's lifecycle will receive the ON_STOP event. This is where the lifecycle components can stop any functionality that does not need to run while the component is not visible on the screen.
+
+##### 📄 onStop() Syntax
 
 ```Kotlin
 override fun onStop() {
@@ -121,9 +135,9 @@ override fun onStop() {
 
 ### 📜 onDestroy()
 
-* onDestroy() is called before the activity is destroyed. The system invokes this callback either because: </br></br>ⓐ the activity is finishing (due to the user completely dismissing the activity or due to finish() being called on the activity), or </br></br>ⓑ the system is temporarily destroying the activity due to a configuration change (such as device rotation or multi-window mode) </br></br>When the activity moves to the destroyed state, any lifecycle-aware component tied to the activity's lifecycle will receive the ON_DESTROY event. This is where the lifecycle components can clean up anything it needs to before the Activity is destroyed.
+* onDestroy() is called before the activity is destroyed. The system invokes this callback either because: </br></br>ⓐ the activity is finishing (due to the user completely dismissing the activity or due to finish() being called on the activity), or </br></br>ⓑ the system is temporarily destroying the activity due to a configuration change (such as device rotation or multi-window mode) </br></br>When the activity moves to the destroyed state, any lifecycle-aware component tied to the activity's lifecycle will receive the ON_DESTROY event. This is where the lifecycle components can clean up anything it needs to before the Activity is destroyed. </br></br> In the onStop() method, the app should release or adjust resources that are not needed while the app is not visible to the user. For example, your app might pause animations or switch from fine-grained to coarse-grained location updates. Using onStop() instead of onPause() ensures that UI-related work continues, even when the user is viewing your activity in multi-window mode. </br></br> You should also use onStop() to perform relatively CPU-intensive shutdown operations. For example, if you can't find a more opportune time to save information to a database, you might do so during onStop(). The following example shows an implementation of onStop() that saves the contents of a draft note to persistent storage:
 
-
+##### 📄 onDestroy() Syntax
 
 ```Kotlin
 override fun onDestroy() {
