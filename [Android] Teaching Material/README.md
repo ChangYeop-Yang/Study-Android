@@ -121,7 +121,7 @@ override fun onStop() {
 
 ### 📜 onDestroy()
 
-* onDestroy() is called before the activity is destroyed. The system invokes this callback either because: ⓐ the activity is finishing (due to the user completely dismissing the activity or due to finish() being called on the activity), or ⓑ the system is temporarily destroying the activity due to a configuration change (such as device rotation or multi-window mode)
+* onDestroy() is called before the activity is destroyed. The system invokes this callback either because: </br>ⓐ the activity is finishing (due to the user completely dismissing the activity or due to finish() being called on the activity), or </br>ⓑ the system is temporarily destroying the activity due to a configuration change (such as device rotation or multi-window mode)
 
 ```Kotlin
 override fun onDestroy() {
