@@ -32,6 +32,8 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 ### 📜 onRestart()
 
+* When the activity enters the Resumed state, it comes to the foreground, and then the system invokes the onResume() callback. This is the state in which the app interacts with the user. The app stays in this state until something happens to take focus away from the app. Such an event might be, for instance, receiving a phone call, the user’s navigating to another activity, or the device screen’s turning off.
+
 ```Kotlin
 override fun onRestart() {
         super.onRestart()
