@@ -157,11 +157,7 @@ override fun onDestroy() {
 
 * Android 스튜디오에서 네이티브 라이브러리를 컴파일하는 기본 빌드 도구는 CMake입니다.
 
-###### 🔨 Android NDK (Native Development Kit) Installation
-
-<p align="center">
-  <img src="" />
-</p>
+###### 🔨 [Android NDK (Native Development Kit) Installation](https://developer.android.com/ndk)
 
 |📷 NDK Installation Image 001|📷 NDK Installation Image 001|
 |:----------------------------:|:---------------------------:|
