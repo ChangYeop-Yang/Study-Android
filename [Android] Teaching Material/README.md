@@ -149,6 +149,28 @@ override fun onDestroy() {
     }
 ```
 
+## 📣 [Android API (Application Programming Interface, 응용 프로그램 프로그래밍 인터페이스) Level](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html)
+
+* API 레벨은 Android 플랫폼 버전에서 제공되는 프레임워크 API 수정 버전을 고유하게 식별하는 정수 값입니다.
+
+* Android 플랫폼은 애플리케이션이 기본 Android 시스템과 상호작용하는 데 사용할 수 있는 프레임워크 API를 제공합니다. 프레임워크 API는 다음 요소로 구성되어 있습니다.
+
+001. 핵심 패키지 및 클래스 집합
+
+002. 매니페스트 파일을 선언하는 데 사용되는 XML 요소 및 특성 집합
+
+003. 리소스를 선언 및 액세스하는 데 사용되는 XML 요소 및 특성 집합
+
+004. 인텐트 집합
+
+005. 애플리케이션이 요청할 수 있는 권한 및 시스템에 포함된 권한 적용 집합
+
+* `android:minSdkVersion` - 애플리케이션이 실행할 수 있는 최소 API 레벨을 지정합니다. 기본값은 "1"입니다. 또한, 선언하지 않는 경우 시스템은 애플리케이션이 API 레벨 1을 필요로 한다고 가정합니다.
+
+* `android:targetSdkVersion` - 애플리케이션이 실행되는 API 레벨을 지정합니다. 경우에 따라, 최소 API 레벨에 정의된 것만 사용하도록 제한하기보다는 애플리케이션이 대상 API 레벨에서 정의된 매니페스트 요소나 동작을 사용하도록 허용해야 할 수도 있습니다.
+
+* `android:maxSdkVersion` — 애플리케이션이 실행할 수 있는 최대 API 레벨을 지정합니다.
+
 ## 📣 Android NDK (Native Development Kit)
 
 * NDK(Native Development Kit)는 Android에서 C 및 C++ 코드를 사용할 수 있게 해주는 일련의 도구 모음으로, 네이티브 액티비티를 관리하고 센서 및 터치 입력과 같은 물리적 기기 구성요소에 액세스하는 데 사용할 수 있는 플랫폼 라이브러리를 제공합니다.
