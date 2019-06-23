@@ -171,7 +171,16 @@ override fun onDestroy() {
 
 * `android:maxSdkVersion` — 애플리케이션이 실행할 수 있는 최대 API 레벨을 지정합니다.
 
-## 📣 Android NDK (Native Development Kit)
+##### 📄 Android API (Application Programming Interface, 응용 프로그램 프로그래밍 인터페이스) Syntax
+
+```XML
+<manifest>
+  <uses-sdk android:minSdkVersion="5" />
+  ...
+</manifest>
+```
+
+## 📣 [Android NDK (Native Development Kit)](https://developer.android.com/ndk)
 
 * NDK(Native Development Kit)는 Android에서 C 및 C++ 코드를 사용할 수 있게 해주는 일련의 도구 모음으로, 네이티브 액티비티를 관리하고 센서 및 터치 입력과 같은 물리적 기기 구성요소에 액세스하는 데 사용할 수 있는 플랫폼 라이브러리를 제공합니다.
 
