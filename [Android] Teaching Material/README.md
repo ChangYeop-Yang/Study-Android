@@ -277,6 +277,16 @@ Java_com_example_myapplication_MainActivity_addTargetFromJNI(JNIEnv *env,  jobje
 } extern "C";
 ```
 
+## 📣 연락처 제공자 (Contact Provider)
+
+* A content provider manages access to a central repository of data. A provider is part of an Android application, which often provides its own UI for working with the data. However, content providers are primarily intended to be used by other applications, which access the provider using a provider client object. Together, providers and provider clients offer a consistent, standard interface to data that also handles inter-process communication and secure data access. </br></br> Typically you work with content providers in one of two scenarios; you may want to implement code to access an existing content provider in another application, or you may want to create a new content provider in your application to share data with other applications.
+
+|Contact Provider Image 001|Contact Provider 002|
+|:------------------------:|:------------------:|
+|![](https://developer.android.com/guide/topics/providers/images/content-provider-tech-stack.png)|![](https://developer.android.com/images/providers/contacts_structure.png?hl=ko)|
+
+* A content provider presents data to external applications as one or more tables that are similar to the tables found in a relational database. A row represents an instance of some type of data the provider collects, and each column in the row represents an individual piece of data collected for an instance.
+
 ## ★ REFERENCE
 
 * [안드로이드 (운영 체제) - 위키백과](https://android-developers.googleblog.com/)
