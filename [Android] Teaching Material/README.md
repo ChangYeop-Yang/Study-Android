@@ -285,6 +285,13 @@ Java_com_example_myapplication_MainActivity_addTargetFromJNI(JNIEnv *env,  jobje
 |:----------------------------:|:---------------------------:|
 |![](https://developer.android.com/images/providers/ContactsDataFlow.png?hl=ko)|![](https://developer.android.com/images/providers/contacts_structure.png?hl=ko)|
 
+##### 📄 연락처 제공자 (Contact Provider) Manifest Source Code
+
+```JAVA
+<uses-permission android:name="android.permission.READ_CONTACTS"/>    // Read Permission
+<uses-permission android:name="android.permission.WRITE_CONTACTS"/>   // Write Permission
+```
+
 ##### 📄 연락처 제공자 (Contact Provider) Source Code
 
 ```JAVA
