@@ -151,6 +151,10 @@ override fun onDestroy() {
 
 ## 📣 [Android API (Application Programming Interface, 응용 프로그램 프로그래밍 인터페이스) Level](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/20036523/59984272-3b294580-9663-11e9-8472-490d26e185bd.png" />
+</p>
+
 * API 레벨은 Android 플랫폼 버전에서 제공되는 프레임워크 API 수정 버전을 고유하게 식별하는 정수 값입니다.
 
 * Android 플랫폼은 애플리케이션이 기본 Android 시스템과 상호작용하는 데 사용할 수 있는 프레임워크 API를 제공합니다. 프레임워크 API는 다음 요소로 구성되어 있습니다.
@@ -169,7 +173,7 @@ override fun onDestroy() {
 
 * `android:targetSdkVersion` - 애플리케이션이 실행되는 API 레벨을 지정합니다. 경우에 따라, 최소 API 레벨에 정의된 것만 사용하도록 제한하기보다는 애플리케이션이 대상 API 레벨에서 정의된 매니페스트 요소나 동작을 사용하도록 허용해야 할 수도 있습니다.
 
-* `android:maxSdkVersion` — 애플리케이션이 실행할 수 있는 최대 API 레벨을 지정합니다.
+* `android:maxSdkVersion` - 애플리케이션이 실행할 수 있는 최대 API 레벨을 지정합니다.
 
 ##### 📄 Android API (Application Programming Interface, 응용 프로그램 프로그래밍 인터페이스) Syntax
 
