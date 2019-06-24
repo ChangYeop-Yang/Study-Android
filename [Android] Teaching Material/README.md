@@ -281,11 +281,25 @@ Java_com_example_myapplication_MainActivity_addTargetFromJNI(JNIEnv *env,  jobje
 
 * The Contacts Provider is a powerful and flexible Android component that manages the device's central repository of data about people. The Contacts Provider is the source of data you see in the device's contacts application, and you can also access its data in your own application and transfer data between the device and online services. The provider accommodates a wide range of data sources and tries to manage as much data as possible for each person, with the result that its organization is complex.
 
-|Contact Provider Image 001|Contact Provider 002|
-|:------------------------:|:------------------:|
+|📷 Contact Provider Image 001|📷 Contact Provider Image 002|
+|:----------------------------:|:---------------------------:|
 |![](https://developer.android.com/images/providers/ContactsDataFlow.png?hl=ko)|![](https://developer.android.com/images/providers/contacts_structure.png?hl=ko)|
 
+## 📣 [Content Provider](https://developer.android.com/guide/topics/providers/content-provider-basics.html#java)
+
 * A content provider presents data to external applications as one or more tables that are similar to the tables found in a relational database. A row represents an instance of some type of data the provider collects, and each column in the row represents an individual piece of data collected for an instance.
+
+|📷 Content Provider Image 001|📷 Content Provider Image 002|📷 Content Provider Image 003|
+|:----------------------------:|:---------------------------:|:----------------------------:|
+|![](https://developer.android.com/guide/topics/providers/images/content-provider-tech-stack.png)|![](https://developer.android.com/guide/topics/providers/images/content-provider-interaction.png)|![](https://s3.amazonaws.com/oodles-technologies1/blog-images/2fa348bd-589d-45dd-bb22-1678e09f8738.png)|
+
+* 콘텐츠 제공자는 중앙 리포지토리로의 데이터 액세스를 관리합니다. 제공자는 Android 애플리케이션의 일부이며, 이는 흔히 데이터 작업을 위한 고유의 UI를 제공합니다. 그러나 콘텐츠 제공자는 기본적으로 다른 애플리케이션이 사용하도록 만들어진 것입니다. 이들은 제공자 클라이언트 객체를 사용하여 제공자에 액세스합니다. 제공자와 제공자 클라이언트가 결합되면 데이터에 하나의 일관적인 표준 인터페이스를 제공하여 이것이 프로세스간 통신과 보안 데이터 액세스도 처리합니다.
+
+<p align="center">
+  <img src="https://en.proft.me/media/android/android_content_provider.jpg" />
+</p>
+
+* Content providers let you centralize content in one place and have many different applications access it as needed. A content provider behaves very much like a database where you can query it, edit its content, as well as add or delete content using insert(), update(), delete(), and query() methods. In most cases this data is stored in an SQlite database.
 
 ## ★ REFERENCE
 
