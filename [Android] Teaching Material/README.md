@@ -344,7 +344,7 @@ do {
 </p>
 
 
-## ★ REFERENCE
+## :rocket: REFERENCE
 
 * [안드로이드 (운영 체제) - 위키백과](https://android-developers.googleblog.com/)
 
