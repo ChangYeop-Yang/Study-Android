@@ -285,6 +285,29 @@ Java_com_example_myapplication_MainActivity_addTargetFromJNI(JNIEnv *env,  jobje
 |:----------------------------:|:---------------------------:|
 |![](https://developer.android.com/images/providers/ContactsDataFlow.png?hl=ko)|![](https://developer.android.com/images/providers/contacts_structure.png?hl=ko)|
 
+##### 📄 연락처 제공자 (Contact Provider) Source Code
+
+```JAVA
+final Cursor cursor = getContentResolver().query(
+                ContactsContract.CommonDataKinds.Phone.CONTENT_URI,     // 조회할 컬럼명
+                null,
+                null,
+                null,
+                null
+);
+
+cursor.moveToFirst();
+do {
+          final Pair<Integer, Integer> index = Pair.create(
+                    cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME),
+                    cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER)
+          );
+
+          System.out.println( String.format("※ TEL -> Name: %s, Phone: %s", cursor.getString(index.first), cursor.getString(index.second)) );
+          
+} while ( cursor.moveToNext() );
+```
+
 ## 📣 [Content Provider](https://developer.android.com/guide/topics/providers/content-provider-basics.html#java)
 
 * 서로 다른 앱에서 데이터를 공유하기 위해서 Content Provider 컴포넌트를 이용하는 방법이 있다. Content Provider는 특정 앱에서 사용하는 데이터베이스 데이터를 공유하기 위해 사용하는 컴포넌트로서 서버-클라이언트 구조로 구성되어 있다. 데이터를 제공하는 앱이 서버 앱이 되며 서버에서 Content Provider를 정의한다. 데이터를 공유받는 앱은 클라이언트 앱이 되어 Content Resolver를 통해 서버 앱의 데이터를 사용한다. 특정 Content Provider를 식별하기 위해서는 URI라는 것을 사용한다. URL 뿐만 아니라 Permission을 통해서도 Content Provider에 접근을 제어할 수 있다.
