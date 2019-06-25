@@ -419,18 +419,83 @@ startService(intent);   // START SERIVCE
 stopService(intent);    // STOP SERVICE
 ```
 
-* BindService - 애플리케이션 구성 요소가 bindService()를 호출하여 해당 서비스에 바인드되면 서비스가 "바인드"됩니다. **바인드된 서비스는 클라이언트-서버 인터페이스를 제공하여 구성 요소가 서비스와 상호작용할 수 있도록 해주며, 결과를 가져올 수도 있고 심지어 이와 같은 작업을 여러 프로세스에 걸쳐 프로세스 간 통신(IPC)으로 수행할 수도 있습니다.** 바인드된 서비스는 또 다른 애플리케이션 구성 요소가 이에 바인드되어 있는 경우에만 실행됩니다. 여러 개의 구성 요소가 서비스에 한꺼번에 바인드될 수 있지만, 이 모든 것이 바인딩을 해제하면 해당 서비스는 소멸됩니다.
+* [BindService](https://bitsoul.tistory.com/149) - 애플리케이션 구성 요소가 bindService()를 호출하여 해당 서비스에 바인드되면 서비스가 "바인드"됩니다. **바인드된 서비스는 클라이언트-서버 인터페이스를 제공하여 구성 요소가 서비스와 상호작용할 수 있도록 해주며, 결과를 가져올 수도 있고 심지어 이와 같은 작업을 여러 프로세스에 걸쳐 프로세스 간 통신(IPC)으로 수행할 수도 있습니다.** 바인드된 서비스는 또 다른 애플리케이션 구성 요소가 이에 바인드되어 있는 경우에만 실행됩니다. 여러 개의 구성 요소가 서비스에 한꺼번에 바인드될 수 있지만, 이 모든 것이 바인딩을 해제하면 해당 서비스는 소멸됩니다.
 
-##### 📄 BindService Type Source Code
+##### 📄 BindService Type Service Source Code
 
 ```JAVA
+public class TestService extends Service {
 
+    IBinder mIBinder = new TestServiceBinder();
+
+    class TestServiceBinder extends Binder {
+        TestService getService() {
+            return TestService.this;
+        }
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        /*  TODO (Internal bindService)
+            Service 객체와 (화면단 Activity 사이에서) 통신(데이터를 주고받을) 할 때 사용하는 메서드이다.
+            데이터를 전달할 필요가 없으면 return null;
+         */
+        Log.e("BIND SERVICE", "Service onBind()...");
+        return this.mIBinder;
+    }
+
+    @Override
+    public void unbindService(ServiceConnection conn) {
+        super.unbindService(conn);
+        Log.e("UNBIND SERVICE", "Service onBind()...");
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.e("SERVICE - onCreate()", "Service Create...");
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.e("SERVICE - onStart()", "Service onStartCommand()...");
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.e("SERVICE - onDestroy()", "Service onDestroy()...");
+    }
+}
 ```
 
-##### 📄 BindService Type Source Code
+##### 📄 BindService Type Activity Source Code
 
 ```JAVA
+private TestService service;
 
+ServiceConnection connection = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            // MARK: - 서비스와 연결이 되었을 때 호출되는 메서드
+            TestService.TestServiceBinder binder = (TestService.TestServiceBinder) iBinder;
+            service = binder.getService();
+
+            Log.e("START BIND SERVICE", "START BIND SERVICE...");
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            // MARK: - 서비스와 연결이 끊기거나 종료되었을 때 호출되는 메서드
+            Log.e("END BIND SERVICE", "ERROR BIND SERVICE...");
+        }
+};
+    
+bindService(intent, this.connection, Context.BIND_AUTO_CREATE);
+
+unbindService(this.connection);    
 ```
 
 #### 🔍 Choosing between a service and a thread
