@@ -1,4 +1,4 @@
-# ■ Android <kbd>[Kyungpook National University](http://www.knu.ac.kr/wbbs/)</kbd>
+# ■ 안드로이드 (Android) <kbd>[Kyungpook National University](http://www.knu.ac.kr/wbbs/)</kbd>
 
 * 안드로이드(영어: Android)는 휴대 전화를 비롯한 휴대용 장치를 위한 운영 체제와 미들웨어, 사용자 인터페이스 그리고 표준 응용 프로그램(웹 브라우저, 이메일 클라이언트, 단문 메시지 서비스(SMS), 멀티미디어 메시지 서비스(MMS)등)을 포함하고 있는 소프트웨어 스택이자 모바일 운영 체제이다. 안드로이드는 개발자들이 자바 와 코틀린 언어로 응용 프로그램을 작성할 수 있게 하였으며, 컴파일된 바이트코드를 구동할 수 있는 런타임 라이브러리를 제공한다. 또한 안드로이드 소프트웨어 개발 키트(SDK)를 통해 응용 프로그램을 개발하는 데 필요한 각종 도구와 응용 프로그램 인터페이스(API)를 제공한다.</br></br>안드로이드는 리눅스 커널 위에서 동작하며, 자바와 코틀린으로 앱을 만들어 동작한다. 또한 다양한 안드로이드 시스템 구성 요소에서 사용되는 C/C++ 라이브러리들을 포함하고 있다. 안드로이드는 기존의 자바 가상 머신과는 다른 가상 머신인 안드로이드 런타임을 통해 자바와 코틀린으로 작성된 응용 프로그램을 별도의 프로세스에서 실행하는 구조로 되어 있다.
 
@@ -343,10 +343,75 @@ do {
   <img src="https://en.proft.me/media/android/android_content_provider.jpg" />
 </p>
 
+## 📣 [Service](https://developer.android.com/guide/components/services#java)
+
+* A Service is an application component that can perform long-running operations in the background, and it doesn't provide a user interface. Another application component can start a service, and it continues to run in the background even if the user switches to another application. Additionally, a component can bind to a service to interact with it and even perform interprocess communication (IPC). For example, a service can handle network transactions, play music, perform file I/O, or interact with a content provider, all from the background.
+
+#### 🔍 Choosing between a service and a thread
+
+* A service is simply a component that can run in the background, even when the user is not interacting with your application, so you should create a service only if that is what you need. </br></br> If you must perform work outside of your main thread, but only while the user is interacting with your application, you should instead create a new thread. For example, if you want to play some music, but only while your activity is running, you might create a thread in onCreate(), start running it in onStart(), and stop it in onStop(). Also consider using AsyncTask or HandlerThread instead of the traditional Thread class. See the Processes and Threading document for more information about threads. </br></br> Remember that if you do use a service, it still runs in your application's main thread by default, so you should still create a new thread within the service if it performs intensive or blocking operations.
+
+##### 📄 Service Manifest Source Code
+
+```JAVA
+<service android:name=".TestService"/>
+```
+
+##### 📄 Service Source Code
+
+```JAVA
+public class TestService extends Service {
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        /*  TODO (Internal bindService)
+            Service 객체와 (화면단 Activity 사이에서) 통신(데이터를 주고받을) 할 때 사용하는 메서드이다.
+            데이터를 전달할 필요가 없으면 return null;
+         */
+        return null;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        
+        Log.e("SERVICE - onCreate()", "Service Create...");
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.e("RECEIVE", intent.getStringExtra("TEST"));
+        Log.e("SERVICE - onStart()", "Service onStartCommand()...");
+        
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        
+        Log.e("SERVICE - onDestroy()", "Service onDestroy()...");
+    }
+}
+```
+
+##### 📄 Activity Source Code
+
+```JAVA
+final Intent intent = new Intent(
+      getApplicationContext(),
+      TestService.class           // SERVICE CLASS NAME
+);
+
+intent.putExtra("TEST", "ACTIVITY TO SERVICE");
+
+startService(intent);   // START SERIVCE
+stopService(intent);    // STOP SERVICE
+```
 
 ## :rocket: REFERENCE
 
-* [안드로이드 (운영 체제) - 위키백과](https://android-developers.googleblog.com/)
+* [Android REFERENCE URL](https://github.com/ChangYeop-Yang/Study-Android/issues/4)
 
 ## ★ Developer Information
 
