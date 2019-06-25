@@ -506,11 +506,11 @@ unbindService(this.connection);
 
 * A service is simply a component that can run in the background, even when the user is not interacting with your application, so you should create a service only if that is what you need. </br></br> If you must perform work outside of your main thread, but only while the user is interacting with your application, you should instead create a new thread. For example, if you want to play some music, but only while your activity is running, you might create a thread in onCreate(), start running it in onStart(), and stop it in onStop(). Also consider using AsyncTask or HandlerThread instead of the traditional Thread class. See the Processes and Threading document for more information about threads. </br></br> Remember that if you do use a service, it still runs in your application's main thread by default, so you should still create a new thread within the service if it performs intensive or blocking operations.
 
-## :rocket: REFERENCE
+## 📣 REFERENCE
 
 * [Android REFERENCE URL](https://github.com/ChangYeop-Yang/Study-Android/issues/4)
 
-## ★ Developer Information
+## 📣 Developer Information
 
 |:rocket: Github QR Code|:pencil: Naver-Blog QR Code|:eyeglasses: Linked-In QR Code|
 |:---------------------:|:-------------------------:|:----------------------------:|
