@@ -343,7 +343,7 @@ do {
   <img src="https://en.proft.me/media/android/android_content_provider.jpg" />
 </p>
 
-## 📣 [Android Service](https://developer.android.com/guide/components/services#java)
+## 📣 [Service](https://developer.android.com/guide/components/services#java)
 
 * A Service is an application component that can perform long-running operations in the background, and it doesn't provide a user interface. Another application component can start a service, and it continues to run in the background even if the user switches to another application. Additionally, a component can bind to a service to interact with it and even perform interprocess communication (IPC). For example, a service can handle network transactions, play music, perform file I/O, or interact with a content provider, all from the background.
 
@@ -365,7 +365,7 @@ do {
   <img src="https://developer.android.com/images/service_lifecycle.png" />
 </p>
 
-#### 1️⃣ StartService 
+#### 1️⃣ [StartService](https://bitsoul.tistory.com/147)
 
 * 서비스가 "시작된" 상태가 되려면 애플리케이션 구성 요소(예: 액티비티)가 startService()를 호출하여 시작하면 됩니다. 서비스는 한 번 시작되고 나면 백그라운드에서 무기한으로 실행될 수 있으며, 이는 해당 서비스를 시작한 구성 요소가 소멸되었더라도 무관합니다. 보통, 시작된 서비스는 한 작업을 수행하고 결과를 호출자에게 반환하지 않습니다. 예를 들어 네트워크에서 파일을 다운로드하거나 업로드할 수 있습니다. 작업을 완료하면, 해당 서비스는 알아서 중단되는 것이 정상입니다.
 
@@ -411,7 +411,7 @@ public class TestService extends Service {
 
 ```JAVA
 final Intent intent = new Intent(
-      getApplicationContext(),
+      this,
       TestService.class           // SERVICE CLASS NAME
 );
 
