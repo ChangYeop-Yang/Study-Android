@@ -343,9 +343,19 @@ do {
   <img src="https://en.proft.me/media/android/android_content_provider.jpg" />
 </p>
 
-## 📣 [Service](https://developer.android.com/guide/components/services#java)
+## 📣 [Android Service](https://developer.android.com/guide/components/services#java)
 
 * A Service is an application component that can perform long-running operations in the background, and it doesn't provide a user interface. Another application component can start a service, and it continues to run in the background even if the user switches to another application. Additionally, a component can bind to a service to interact with it and even perform interprocess communication (IPC). For example, a service can handle network transactions, play music, perform file I/O, or interact with a content provider, all from the background.
+
+#### Android Service Type
+
+<p align="center">
+  <img src="https://developer.android.com/images/service_lifecycle.png" />
+</p>
+
+* StartService - 서비스가 "시작된" 상태가 되려면 애플리케이션 구성 요소(예: 액티비티)가 startService()를 호출하여 시작하면 됩니다. 서비스는 한 번 시작되고 나면 백그라운드에서 무기한으로 실행될 수 있으며, 이는 해당 서비스를 시작한 구성 요소가 소멸되었더라도 무관합니다. 보통, 시작된 서비스는 한 작업을 수행하고 결과를 호출자에게 반환하지 않습니다. 예를 들어 네트워크에서 파일을 다운로드하거나 업로드할 수 있습니다. 작업을 완료하면, 해당 서비스는 알아서 중단되는 것이 정상입니다.
+
+* BindService - 애플리케이션 구성 요소가 bindService()를 호출하여 해당 서비스에 바인드되면 서비스가 "바인드"됩니다. **바인드된 서비스는 클라이언트-서버 인터페이스를 제공하여 구성 요소가 서비스와 상호작용할 수 있도록 해주며, 결과를 가져올 수도 있고 심지어 이와 같은 작업을 여러 프로세스에 걸쳐 프로세스 간 통신(IPC)으로 수행할 수도 있습니다.** 바인드된 서비스는 또 다른 애플리케이션 구성 요소가 이에 바인드되어 있는 경우에만 실행됩니다. 여러 개의 구성 요소가 서비스에 한꺼번에 바인드될 수 있지만, 이 모든 것이 바인딩을 해제하면 해당 서비스는 소멸됩니다.
 
 #### 🔍 Choosing between a service and a thread
 
@@ -354,7 +364,13 @@ do {
 ##### 📄 Service Manifest Source Code
 
 ```JAVA
-<service android:name=".TestService"/>
+<manifest ... >
+  ...
+  <application ... >
+      <service android:name=".ExampleService" />
+      ...
+  </application>
+</manifest>
 ```
 
 ##### 📄 Service Source Code
