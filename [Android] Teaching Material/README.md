@@ -521,6 +521,11 @@ unbindService(this.connection);
     <intent-filter>
         <action android:name="android.intent.action.BOOT_COMPLETED"/>
         <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
+        
+        <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+
+        <action android:name="EXAMPLE_INTENT_BROADCASE"/>
     </intent-filter>
 </receiver>
 ```
@@ -538,11 +543,11 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
         switch (action) {
             case Intent.ACTION_BATTERY_CHANGED: { /* Here Action ACTION_BATTERY_CHANGED Changed */ break; }
             case Intent.ACTION_BOOT_COMPLETED:  { /* Here Action ACTION_BOOT_COMPLETED Changed */ break; }
+            case "EXAMPLE_INTENT_BROADCASE": { /* Here User Custom Broadcast */ break; }
         }
-
+        
         Toast.makeText(context, intent.getAction(), Toast.LENGTH_SHORT).show();
     }
-
 }
 ```
 
@@ -552,8 +557,12 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 // TODO: Broadcast Receiver
 final BroadcastReceiver receiver = new MyBroadcastReceiver();
 
+// SYSTEM BROADCAST
 IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
 this.registerReceiver(receiver, filter);
+
+// USER CUSTOM BROADCAST
+sendBroadcast( new Intent("EXAMPLE_INTENT_BROADCASE") );
 ```
 
 ### 📚 [브로드캐스트 리시버 종류 (Broadcast Receiver Type)](https://en.proft.me/2017/03/10/android-broadcastreceiver-tutorial/)
