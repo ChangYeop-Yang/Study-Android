@@ -558,19 +558,19 @@ this.registerReceiver(receiver, filter);
 
 ### 📚 [브로드캐스트 리시버 종류 (Broadcast Receiver Type)](https://en.proft.me/2017/03/10/android-broadcastreceiver-tutorial/)
 
-* android.intent.action.BATTERY_CHANGED - sticky broadcast containing the charging state, level, and other information about the battery.
+* `android.intent.action.BATTERY_CHANGED` - sticky broadcast containing the charging state, level, and other information about the battery.
 
-* android.intent.action.BATTERY_LOW - indicates low battery condition on the device.
+* `android.intent.action.BATTERY_LOW` - indicates low battery condition on the device.
 
-* android.intent.action.BOOT_COMPLETED - this is broadcast once, after the system has finished booting.
+* `android.intent.action.BOOT_COMPLETED` - this is broadcast once, after the system has finished booting.
 
-* android.intent.action.CALL - to perform a call to someone specified by the data.
+* `android.intent.action.CALL` - to perform a call to someone specified by the data.
 
-* android.intent.action.DATE_CHANGED - the date has changed.
+* `android.intent.action.DATE_CHANGED` - the date has changed.
 
-* android.intent.action.REBOOT - have the device reboot.
+* `android.intent.action.REBOOT` - have the device reboot.
 
-* android.net.conn.CONNECTIVITY_CHANGE : The mobile network or wifi connection is changed(or reset)
+* `android.net.conn.CONNECTIVITY_CHANGE` - The mobile network or wifi connection is changed(or reset)
 
 ## 📣 REFERENCE
 
