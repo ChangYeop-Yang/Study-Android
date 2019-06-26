@@ -508,7 +508,69 @@ unbindService(this.connection);
 
 ## 📣 [브로드캐스트 리시버 (Broadcast Receiver)](https://developer.android.com/guide/components/broadcasts)
 
+<p align="center">
+  <img src="http://en.proft.me/media/android/android_broadcastreceiver.png" />
+</p>
+
 * Android apps can send or receive broadcast messages from the Android system and other Android apps, similar to the publish-subscribe design pattern. These broadcasts are sent when an event of interest occurs. For example, the Android system sends broadcasts when various system events occur, such as when the system boots up or the device starts charging. Apps can also send custom broadcasts, for example, to notify other apps of something that they might be interested in (for example, some new data has been downloaded). </br></br> Apps can register to receive specific broadcasts. When a broadcast is sent, the system automatically routes broadcasts to apps that have subscribed to receive that particular type of broadcast. </br></br> Generally speaking, broadcasts can be used as a messaging system across apps and outside of the normal user flow. However, you must be careful not to abuse the opportunity to respond to broadcasts and run jobs in the background that can contribute to a slow system performance.
+
+##### 📄 Broadcast Receiver Manifest Source Code
+
+```JAVA
+<receiver android:name=".MyBroadcastReceiver"  android:exported="true">
+    <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
+    </intent-filter>
+</receiver>
+```
+
+##### 📄 Broadcast Receiver Class Source Code
+
+```JAVA
+public class MyBroadcastReceiver extends BroadcastReceiver {
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+
+        final String action = intent.getAction();
+        
+        switch (action) {
+            case Intent.ACTION_BATTERY_CHANGED: { /* Here Action ACTION_BATTERY_CHANGED Changed */ break; }
+            case Intent.ACTION_BOOT_COMPLETED:  { /* Here Action ACTION_BOOT_COMPLETED Changed */ break; }
+        }
+
+        Toast.makeText(context, intent.getAction(), Toast.LENGTH_SHORT).show();
+    }
+
+}
+```
+
+##### 📄 Broadcast Receiver Activity Source Code
+
+```JAVA
+// TODO: Broadcast Receiver
+final BroadcastReceiver receiver = new MyBroadcastReceiver();
+
+IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+this.registerReceiver(receiver, filter);
+```
+
+### 📚 [브로드캐스트 리시버 종류 (Broadcast Receiver Type)](https://en.proft.me/2017/03/10/android-broadcastreceiver-tutorial/)
+
+* android.intent.action.BATTERY_CHANGED - sticky broadcast containing the charging state, level, and other information about the battery.
+
+* android.intent.action.BATTERY_LOW - indicates low battery condition on the device.
+
+* android.intent.action.BOOT_COMPLETED - this is broadcast once, after the system has finished booting.
+
+* android.intent.action.CALL - to perform a call to someone specified by the data.
+
+* android.intent.action.DATE_CHANGED - the date has changed.
+
+* android.intent.action.REBOOT - have the device reboot.
+
+* android.net.conn.CONNECTIVITY_CHANGE : The mobile network or wifi connection is changed(or reset)
 
 ## 📣 REFERENCE
 
