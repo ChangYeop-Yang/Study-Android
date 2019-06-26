@@ -565,7 +565,7 @@ this.registerReceiver(receiver, filter);
 sendBroadcast( new Intent("EXAMPLE_INTENT_BROADCASE") );
 ```
 
-### 📚 [브로드캐스트 리시버 종류 (Broadcast Receiver Type)](https://en.proft.me/2017/03/10/android-broadcastreceiver-tutorial/)
+### 📚 [브로드캐스트 리시버 서비스 종류 (Broadcast Receiver Service Type)](https://en.proft.me/2017/03/10/android-broadcastreceiver-tutorial/)
 
 * `android.intent.action.BATTERY_CHANGED` - sticky broadcast containing the charging state, level, and other information about the battery.
 
@@ -580,6 +580,10 @@ sendBroadcast( new Intent("EXAMPLE_INTENT_BROADCASE") );
 * `android.intent.action.REBOOT` - have the device reboot.
 
 * `android.net.conn.CONNECTIVITY_CHANGE` - The mobile network or wifi connection is changed(or reset)
+
+### 🃏 [Non-ordered vs. Ordered Broadcasts](http://blog.naver.com/huewu/110101453514)
+
+* **순서가 없는 일반적인 브로드캐스트 인텐트**는 '이론상' 등록된 모든 리시버에게 동시에 전달됩니다. 다시 말해, 어플리케이션 개발자의 입장에서 생각해 본다면, 일반적인 브로드캐스트를 수신하는 어떤 리시버는 동일한 브로드캐스트를 수신하는 다른 리시버와 독립적으로 동작하며, 서로 간에 상호 작용 할 수 있는 인터페이스가 존재하지 않습니다. 간단한 예로, ACTION_BATTERY_LOW 와 같은 인텐트를 들 수 있겠습니다. 여러분은 해당 브로드캐스트를 수신하는 리시버를 구현할 수는 있지만, 리시버 내부에서 또 다른 리시버가 이 인텐트를 수신할 수 없도록 하거나, 송신되는 내용을 변경하는 등의 일을 할 수는 없습니다. </br></br>이와는 다르게, **순서 있는 브로드 캐스트 (Ordered Broadcast)** 는 등록된 각각의 리시버에 정해진 순서대로 전달됩니다. (이 순서는 여러분이 메니페스트 상에 리시버를 정의할 때 설정해둔 android:priority 속성 값에 의해 결정됩니다. 숫자가 높을 수록 우선 순위가 높다고 생각하시면 됩니다.) 한 번에 하 나씩 차례로 리시버가 동작하기 때문에, 리시버 내부에서 브로드 캐스트 전송 작업을 중지 시켜, 자신 보다 우선 순위가 낮은 리시버들은 이 메세지를 전달 받지 못하도록 하거나, setResult() / getResult() 등의 메서드를 이용하여 전달될 메세지의 내용을 수정하거나 상위 리시버가 전달해준 내용을 확인 할 수 있습니다.
 
 ## 📣 REFERENCE
 
