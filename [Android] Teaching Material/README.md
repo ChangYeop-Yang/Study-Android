@@ -1,4 +1,4 @@
-# ■ 안드로이드 (Android) <kbd>[Kyungpook National University](http://www.knu.ac.kr/wbbs/)</kbd>
+# ■ [안드로이드 (Android)](https://source.android.com/devices/architecture) <kbd>[Kyungpook National University](http://www.knu.ac.kr/wbbs/)</kbd>
 
 <p align="center">
   <img src="https://source.android.com/devices/images/ape_fwk_all.png" />
