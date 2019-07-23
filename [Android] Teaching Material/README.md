@@ -591,7 +591,41 @@ sendBroadcast( new Intent("EXAMPLE_INTENT_BROADCASE") );
 
 ## 📣 MVP (Model View Presenter) on Android
 
+## 📣 Date Picker Dialog
 
+<p align="center">
+  <img src="https://k.kakaocdn.net/dn/w2rZB/btqwXfTs4PT/UCg9LXzQIMCYx6KEfDD5a1/img.png" width=250 height=400 />
+</p>
+
+* A simple dialog containing an DatePicker.
+
+##### 📄 Date Picker Dialog Listener Source Code
+
+```Java
+// TODO: - DatePickerDialog Listener
+	private DatePickerDialog.OnDateSetListener onDatePickerListener = new DatePickerDialog.OnDateSetListener() {
+		@Override
+		public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+			monthOfYear++;
+
+			final String day = dayOfMonth / 10 == 0 ? "0" + dayOfMonth : Integer.toString(dayOfMonth);
+			final String month = monthOfYear / 10 == 0 ? "0" + monthOfYear : Integer.toString(monthOfYear);
+
+			Toast.makeText(view.getContext(), String.format("%d-%d-%d", year, monthOfYear, dayOfMonth), Toast.LENGTH_SHORT).show();
+		}
+	};
+```
+
+##### 📄 Date Picker Dialog Source Code
+
+```Java
+final Calendar mCurrentTime = Calendar.getInstance(); 
+
+final DatePickerDialog mDatePickerDialog = new DatePickerDialog(this, this.onDatePickerListener, mCurrentTime.get(Calendar.YEAR), mCurrentTime.get(Calendar.MONTH), mCurrentTime.get(Calendar.DAY_OF_MONTH) );
+
+mDatePickerDialog.show();
+```
 
 ## 📣 REFERENCE
 
