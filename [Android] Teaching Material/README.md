@@ -603,18 +603,18 @@ sendBroadcast( new Intent("EXAMPLE_INTENT_BROADCASE") );
 
 ```Java
 // TODO: - DatePickerDialog Listener
-	private DatePickerDialog.OnDateSetListener onDatePickerListener = new DatePickerDialog.OnDateSetListener() {
-		@Override
-		public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+private DatePickerDialog.OnDateSetListener onDatePickerListener = new DatePickerDialog.OnDateSetListener() {
+	@Override
+	public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 
-			monthOfYear++;
+		monthOfYear++;
 
-			final String day = dayOfMonth / 10 == 0 ? "0" + dayOfMonth : Integer.toString(dayOfMonth);
-			final String month = monthOfYear / 10 == 0 ? "0" + monthOfYear : Integer.toString(monthOfYear);
+		final String day = dayOfMonth / 10 == 0 ? "0" + dayOfMonth : Integer.toString(dayOfMonth);
+		final String month = monthOfYear / 10 == 0 ? "0" + monthOfYear : Integer.toString(monthOfYear);
 
-			Toast.makeText(view.getContext(), String.format("%d-%d-%d", year, monthOfYear, dayOfMonth), Toast.LENGTH_SHORT).show();
-		}
-	};
+		Toast.makeText(view.getContext(), String.format("%d-%d-%d", year, monthOfYear, dayOfMonth), Toast.LENGTH_SHORT).show();
+	}
+};
 ```
 
 ##### 📄 Date Picker Dialog Source Code
